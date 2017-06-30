@@ -7,8 +7,7 @@ def cena_jednotky_pizzy(prumery, ceny) :
 	return vysledky
 
 def nejlevnejsi_pizza(vysledne_ceny) :
-	for cena in vysledne_ceny :
-		
+	return vysledne_ceny.index(min(vysledne_ceny))
 
 pocet_pizz = int(input("Kolik ruznych cen pizzy chces porovnavat?\n"))
 pizzy_prumer = []
@@ -26,3 +25,4 @@ for pizza in range(0, pocet_pizz) :
 	print('Pizza %s stoji %s kc za jednotku.' %((pizza + 1), vysledek))
 """
 ceny_pizz_za_jednotku = cena_jednotky_pizzy(pizzy_prumer, pizzy_cena)
+print('Nejlevnejsi je pizza cislo %s.' %(nejlevnejsi_pizza(ceny_pizz_za_jednotku) + 1))
